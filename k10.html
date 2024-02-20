@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <title>Kessler Psychological Distress Scale Assessment</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet"
+          href="k10.css">
+
+    <script type="text/javascript"
+            src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function () {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init({
+                publicKey: "W6U5FjEHmiSOx9iSd",
+            });
+        })();
+    </script>
+</head>
+
+<body>
+
+    <div id="loginModal"
+         class="modal">
+        <div class="modal-content">
+            <h2>Login</h2>
+            <div class="text-area"> Please enter your username and password to unlock the form</div>
+
+            <input type="text"
+                   id="usernameField"
+                   class="input-field"
+                   placeholder="Username / Email">
+            <input type="password"
+                   id="passwordField"
+                   class="input-field"
+                   placeholder="Password">
+            <button onclick="unlockContent()"
+                    class="unlock-button">Unlock</button>
+            <div id="errorMessage"
+                 class="error-message hidden"></div>
+        </div>
+    </div>
+
+    <div id="hiddenFormArea" class="form-area hidden">
+        <div class="assessment-container">
+            <h1 class="assessment-title">Kessler Psychological Distress Scale Assessment</h1>
+
+            <form id="assessmentForm"
+                  class="questions-grid">
+                <!-- Questions will be dynamically inserted here -->
+            </form>
+            <button type="button"
+                    onclick="submitForm()"
+                    class="action-button submit-button">Submit</button>
+            <div id="errorMessage"></div>
+            <div id="scoreResult"></div>
+        </div>
+    </div>
+
+    <!-- Message Modal -->
+    <div id="messageModal" class="modal hidden">
+        <div class="modal-content">
+            <p id="formSubmittedMessage"></p>
+            <a href="/" class="button-link">Go to Home Page</a>
+        </div>
+    </div>
+
+    <script src="k10.js"></script>
+</body>
+
+</html>
