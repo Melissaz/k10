@@ -178,10 +178,9 @@ body {
     gap: 20px;
 }
 
-/* Styling for each question label for clarity and readability */
 .question-label {
     display: block;
-    margin-bottom: 5px;
+    margin: 10px o;
     font-weight: 600;
     color: #555;
 }
